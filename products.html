@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Products | Algomart</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="images/logo.png">
+  <link rel="stylesheet" href="assets/styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="./assets/js/products.js"></script>
+  <script src="./assets/js/script.js"></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggleBtn = document.getElementById("menu-toggle");
+      const menu = document.getElementById("mobile-menu");
+      toggleBtn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    });
+  </script>
+</head>
+
+<body class="bg-gradient-to-br from-purple-100 via-pink-100 to-blue-100 text-gray-800">
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center py-4">
+        <a href="./index.html" class="text-2xl font-bold text-purple-700">Algomart</a>
+        <button id="menu-toggle" class="md:hidden text-purple-700 text-2xl">
+          <i class="bi bi-list"></i>
+        </button>
+        <div class="hidden md:flex space-x-6">
+          <a href="./index.html" class="text-gray-600 hover:text-purple-700 underline-animation"><i class="bi bi-house-door"></i> Home</a>
+          <a href="./cart.html" class="text-gray-600 hover:text-purple-700 underline-animation"><i class="bi bi-cart"></i> Cart</a>
+          <a href="./orders.html" class="text-gray-600 hover:text-purple-700 underline-animation"><i class="bi bi-table"></i> Orders</a>
+          <a href="./products.html" class="text-gray-600 hover:text-purple-700 underline-animation"><i class="bi bi-grid-3x3-gap"></i> Products</a>
+          <a href="./pricing.html" class="text-gray-600 hover:text-purple-700 underline-animation"><i class="bi bi-tag"></i> Pricing</a>
+        </div>
+        <!-- <div class="hidden md:flex items-center space-x-2">
+          <a href="./login.html" class="px-4 py-2 border border-purple-500 text-purple-700 rounded hover:bg-purple-100">Login</a>
+          <a href="./signup.html" class="px-4 py-2 bg-purple-600 text-white rounded hover:bg-purple-700">Sign-up</a>
+        </div> -->
+      </div>
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="md:hidden hidden flex-col space-y-4 py-4">
+        <a href="./index.html" class="block text-gray-600 hover:text-purple-700 underline-animation"><i class="bi bi-house-door"></i> Home</a>
+        <a href="./cart.html" class="block text-gray-600 hover:text-purple-700 underline-animation"><i class="bi bi-cart"></i> Cart</a>
+        <a href="./orders.html" class="block text-gray-600 hover:text-purple-700 underline-animation"><i class="bi bi-table"></i> Orders</a>
+        <a href="./products.html" class="block text-gray-600 hover:text-purple-700 underline-animation"><i class="bi bi-grid-3x3-gap"></i> Products</a>
+        <a href="./pricing.html" class="block text-gray-600 hover:text-purple-700 underline-animation"><i class="bi bi-tag"></i> Pricing</a>
+        <div class="flex space-x-2">
+          <a href="./login.html" class="px-4 py-2 border border-purple-500 text-purple-700 rounded hover:bg-purple-100">Login</a>
+          <a href="./signup.html" class="px-4 py-2 bg-purple-600 text-white rounded hover:bg-purple-700">Sign-up</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Category Buttons -->
+  <div class="container py-6">
+    <h2 class="text-center mb-4 text-2xl font-semibold">Product Categories</h2>
+    <div class="flex flex-wrap gap-3 justify-center mb-6">
+      <button class="btn btn-outline-dark" onclick="showCategory('Mobiles')">Mobiles</button>
+      <button class="btn btn-outline-dark" onclick="showCategory('Laptops')">Laptops</button>
+      <button class="btn btn-outline-dark" onclick="showCategory('Shoes')">Shoes</button>
+      <button class="btn btn-outline-dark" onclick="showCategory('Fitness')">Fitness</button>
+      <button class="btn btn-outline-dark" onclick="showCategory('Gadgets')">Gadgets</button>
+      <button class="btn btn-outline-dark" onclick="showCategory('Grocery')">Grocery</button>
+    </div>
+
+    <!-- Product List -->
+    
+  <section id="Laptops" class="product-category mb-5">
+  <div class="row justify-content-center">
+    <!-- 5 laptop product cards go here -->
+     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" id="product-list"></div>
+  </div>
+</section>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-white mt-12 border-t">
+    <div class="max-w-7xl mx-auto px-4 py-12 grid md:grid-cols-2 gap-8">
+      <div>
+        <h5 class="text-xl font-semibold mb-4 text-purple-700">Quick Links</h5>
+        <ul class="space-y-2 text-gray-600">
+          <li><a href="./index.html" class="hover:text-purple-600 underline-animation">Home</a></li>
+          <li><a href="./cart.html" class="hover:text-purple-600 underline-animation">Cart</a></li>
+          <li><a href="./orders.html" class="hover:text-purple-600 underline-animation">Orders</a></li>
+          <li><a href="./products.html" class="hover:text-purple-600 underline-animation">Products</a></li>
+          <li><a href="./pricing.html" class="hover:text-purple-600 underline-animation">Pricing</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="text-xl font-semibold mb-4 text-purple-700">Follow Us</h5>
+        <div class="flex space-x-4 text-xl">
+          <a href="#" class="text-gray-700 hover:text-purple-600 underline-animation"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="text-gray-700 hover:text-purple-600 underline-animation"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="text-gray-700 hover:text-purple-600 underline-animation"><i class="bi bi-twitter"></i></a>
+        </div>
+        <form class="mt-6">
+          <label class="block text-gray-700 mb-2">Subscribe to our newsletter</label>
+          <div class="flex flex-col sm:flex-row items-center gap-2">
+            <input type="email" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-purple-300" placeholder="Email address">
+            <button type="submit" class="px-4 py-2 bg-purple-600 text-white rounded hover:bg-purple-700">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="text-center text-sm text-gray-500 py-4 border-t">
+      <p>© 2025 Algomart. All rights reserved. Crafted by Algomart Team.</p>
+    </div>
+  </footer>
+  <script> window.onload = () => showCategory('Mobiles');</script>
+ 
+</body>
+
+</html>
